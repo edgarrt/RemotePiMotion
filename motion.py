@@ -75,9 +75,9 @@ for fram in camera.capture_continuous(rawCapture, format="bgr", use_video_port=T
 
                       time = str(datetime.now())
 
-                      cv2.putText(frame, time, (10, frame.shape[0] - 10), cv2.FONT_HE$
+                      cv2.putText(frame, time, (10, frame.shape[0] - 10), cv2.FONT_HERSHEY_SIMPLEX,0.35, (255, 255, 255), 1)
 
-                      cv2.imwrite("/home/pi/motion" + str(motionDetected) + ".jpg", f$
+                      cv2.imwrite("/home/pi/motion" + str(motionDetected) + ".jpg", frame)
 
                       print"motion detected"
 
