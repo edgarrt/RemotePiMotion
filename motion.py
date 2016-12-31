@@ -30,8 +30,8 @@ motionDetected = 1 #first frame is always counted
 fgbg = cv2.createBackgroundSubtractorMOG2(20,30,False)
 
 #initializes email
-fromaddr = "remotepimotion@gmail.com"
-toaddr = "edgartrujillo18@gmail.com"
+fromaddr = "****From Email Address***"
+toaddr = "***To Email Address****"
 msg = MIMEMultipart()
 msg['From'] = fromaddr
 msg['To'] = toaddr
@@ -100,7 +100,7 @@ for fram in camera.capture_continuous(rawCapture, format="bgr", use_video_port=T
                       
                       server = smtplib.SMTP('smtp.gmail.com', 587)
                       server.starttls()
-                      server.login(fromaddr, "Raspberry2016")
+                      server.login(fromaddr, "******PASSWORD****")
                       text = msg.as_string()
                       server.sendmail(fromaddr , toaddr, text)
 
